@@ -1,10 +1,14 @@
 function trigramGenerator(text) {
     if (typeof text !== 'string') throw new Error();
 
-    const words = text.split(' ');
+    const words = whitespaceHandler(text).split(' ');
     let chunks = generateChunks(words);
 
     return generateTrigrams(chunks);
+}
+
+function whitespaceHandler(text) {
+    return text.replace(/\s+/g, ' ').trim(); 
 }
 
 function generateChunks(words) {
@@ -29,4 +33,4 @@ function generateTrigrams(words) {
 }
 
 
-module.exports = {trigramGenerator, generateChunks};
+module.exports = {trigramGenerator, generateChunks, whitespaceHandler};
