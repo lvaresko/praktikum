@@ -46,12 +46,18 @@ describe.skip('trigramGenerator basic', function() {
         expect(trigramGenerator('I wish I may I wish')).to.eql(new Map([['I wish', ['I']], ['wish I', ['may']], ['I may', ['I']], ['may I', ['wish']]]));
     });
 
-    it('should return correct trigram for  words input', function () {
+    it('should return correct trigram for 7 words input', function () {
         expect(trigramGenerator('I wish I may I wish I')).to.eql(new Map([['I wish', ['I', 'I']], ['wish I', ['may']], ['I may', ['I']], ['may I', ['wish']]]));
     });
 
+    const eightWordsInputTrigram = new Map([['I wish', ['I','I']], ['wish I', ['may','might']], ['may I', ['wish']], ['I may', ['I']]]);
+
     it('should return correct trigram for 8 words input', function () {
-        expect(trigramGenerator('I wish I may I wish I might')).to.eql(new Map([['I wish', ['I','I']], ['wish I', ['may','might']], ['may I', ['wish']], ['I may', ['I']]]));
+        expect(trigramGenerator('I wish I may I wish I might')).to.eql(eightWordsInputTrigram);
+    });
+
+    it('should return correct trigram for 8 words input with whitespaces', function () {
+        expect(trigramGenerator('I wish\n I may I\n\r wish   I might  ')).to.eql(eightWordsInputTrigram);
     });
 });
 
