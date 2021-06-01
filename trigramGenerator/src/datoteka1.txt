@@ -29,3 +29,5 @@ Currently the Forecast platform has some 26 integrations of popular tools used f
 The result may not ever replace an actual human project manager, but certainly starts to then look like a “digital twin” (a phrase I have been hearing more and more these days) that will definitely help that person, and the rest of the team, work in a smarter way.
 
 “We are really excited to be an early investor in Forecast,” said James Wise,  a partner at Balderton Capital, in a statement. “We share their belief that the next generation of SaaS products will be more than just collaboration tools, but use machine learning to actively solve problems for their users. The feedback we got from Forecast’s customers was quite incredible, both in their praise for the platform and in how much of a difference it had already made to their operations. We look forward to supporting the company to scale this impact going forward.”
+
+I am super smart.
