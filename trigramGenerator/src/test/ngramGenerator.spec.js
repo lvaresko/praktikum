@@ -6,7 +6,7 @@ const {
   handleWhitespace,
 } = require("../ngramGenerator");
 
-describe("ngramGenerator tests", function () {
+describe.skip("ngramGenerator tests", function () {
   it("ngramGenerator should be a function", function () {
     expect(ngramGenerator).to.be.a("function");
   });
