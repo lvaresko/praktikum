@@ -43,16 +43,32 @@ describe("arabic to roman function tests", function () {
     expect(arabicToRoman(24)).to.equal("XXIV");
   });
 
+  it("should return XL for input 40", function () {
+    expect(arabicToRoman(40)).to.equal("XL");
+  });
+
   it("should return L for input 50", function () {
     expect(arabicToRoman(50)).to.equal("L");
+  });
+
+  it("should return XC for input 90", function () {
+    expect(arabicToRoman(90)).to.equal("XC");
   });
 
   it("should return C for input 100", function () {
     expect(arabicToRoman(100)).to.equal("C");
   });
 
+  it("should return CD for input 400", function () {
+    expect(arabicToRoman(400)).to.equal("CD");
+  });
+
   it("should return D for input 500", function () {
     expect(arabicToRoman(500)).to.equal("D");
+  });
+
+  it("should return CM for input 900", function () {
+    expect(arabicToRoman(900)).to.equal("CM");
   });
 
   it("should return M for input 1000", function () {
