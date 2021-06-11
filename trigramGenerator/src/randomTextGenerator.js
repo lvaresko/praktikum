@@ -7,14 +7,14 @@ const trigramMap = ngramGenerator(documentText, 3);
 const bigramMap = ngramGenerator(documentText, 2);
 
 function generateRandomText (num) {
-    if (typeof num !== "number") throw new Error();
+  if (typeof num !== "number") throw new Error();
 
-    let first_chunk = generateFirstChunk();
-    let sentence = generateSentence(first_chunk, num); 
+  let first_chunk = generateFirstChunk();
+  let sentence = generateSentence(first_chunk, num);
 
-    if (sentence[sentence - 1] != ".") sentence = expandSentenceUntilDotFound(sentence);
+  if (sentence[sentence - 1] != ".") sentence = expandSentenceUntilDotFound(sentence);
 
-    return sentence.join(" ");
+  return sentence.join(" ");
 }
 
 function getRandomElement (array) {
@@ -31,7 +31,7 @@ function generateFirstChunk () {
 function generateSentence(first_chunk, num) {
     let sentence = first_chunk;
     while (sentence.length != num) {
-        sentence.push(getRandomWord(sentence));
+      sentence.push(getRandomWord(sentence));
     }
     return sentence;
 }
